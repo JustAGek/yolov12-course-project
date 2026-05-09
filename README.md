@@ -3,7 +3,7 @@
 [![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/abdulrahmanhammd/yolov12-course-project)
 
 Project report PDF: [project/report.pdf](project/report.pdf)
-
+(deliverables/Proposal.pdf)
 ## Abstract
 
 We evaluate the attention-centric YOLOv12n detector against YOLO11n and YOLOv8n on the COCO 2017 validation set. The approach uses official pretrained weights and a unified evaluation pipeline to compare accuracy and speed. YOLOv12n achieves the best overall detection accuracy, with consistent gains across small, medium, and large objects.
