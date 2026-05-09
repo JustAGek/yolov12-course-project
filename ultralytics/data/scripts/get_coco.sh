@@ -28,7 +28,7 @@ fi
 
 # Download/unzip labels
 d='../datasets' # unzip directory
-url=https://github.com/ultralytics/assets/releases/download/v0.0.0/
+url=https://github.com/JustAGek/yolov12-course-projectassets/releases/download/v0.0.0/
 if [ "$segments" == "true" ]; then
   f='coco2017labels-segments.zip' # 169 MB
 elif [ "$sama" == "true" ]; then

@@ -144,14 +144,14 @@ And also:
 you can check out all CLI arguments by:
 
 ```bash
-git clone https://github.com/ultralytics/ultralytics
+git clone https://github.com/JustAGek/yolov12-course-project
 cd ultralytics/examples/YOLOv8-ONNXRuntime-Rust
 cargo run --release -- --help
 ```
 
 ## Examples
 
-![Ultralytics YOLO Tasks](https://raw.githubusercontent.com/ultralytics/assets/main/im/banner-tasks.png)
+![Ultralytics YOLO Tasks](https://github.com/JustAGek/yolov12-course-projectassets/main/im/banner-tasks.png)
 
 ### Classification
 

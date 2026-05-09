@@ -289,7 +289,7 @@ class BaseDataset(Dataset):
 
     def get_image_and_label(self, index):
         """Get and return label information from the dataset."""
-        label = deepcopy(self.labels[index])  # requires deepcopy() https://github.com/ultralytics/ultralytics/pull/1948
+        label = deepcopy(self.labels[index])  # requires deepcopy() https://github.com/JustAGek/yolov12-course-project/pull/1948
         label.pop("shape", None)  # shape is for rect, remove it
         label["img"], label["ori_shape"], label["resized_shape"] = self.load_image(index)
         label["ratio_pad"] = (

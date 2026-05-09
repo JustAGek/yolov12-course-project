@@ -43,7 +43,7 @@ TORCHVISION_0_18 = check_version(TORCHVISION_VERSION, "0.18.0")
 if WINDOWS and check_version(torch.__version__, "==2.4.0"):  # reject version 2.4.0 on Windows
     LOGGER.warning(
         "WARNING ⚠️ Known issue with torch==2.4.0 on Windows with CPU, recommend upgrading to torch>=2.4.1 to resolve "
-        "https://github.com/ultralytics/ultralytics/issues/15049"
+        "https://github.com/JustAGek/yolov12-course-project/issues/15049"
     )
 
 
@@ -478,7 +478,7 @@ def init_seeds(seed=0, deterministic=False):
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)  # for Multi-GPU, exception safe
-    # torch.backends.cudnn.benchmark = True  # AutoBatch problem https://github.com/ultralytics/yolov5/issues/9287
+    # torch.backends.cudnn.benchmark = True  # AutoBatch problem https://github.com/JustAGek/yolov12-course-projectyolov5/issues/9287
     if deterministic:
         if TORCH_2_0:
             torch.use_deterministic_algorithms(True, warn_only=True)  # warn if deterministic is not possible

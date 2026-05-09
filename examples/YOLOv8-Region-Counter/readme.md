@@ -30,7 +30,7 @@ Clone the repository, install dependencies and `cd` to this local directory for 
 
 ```bash
 # Clone ultralytics repo
-git clone https://github.com/ultralytics/ultralytics
+git clone https://github.com/JustAGek/yolov12-course-project
 
 # cd to local directory
 cd ultralytics/examples/YOLOv8-Region-Counter

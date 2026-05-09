@@ -32,7 +32,7 @@ HUB_API_ROOT = os.environ.get("ULTRALYTICS_HUB_API", "https://api.ultralytics.co
 HUB_WEB_ROOT = os.environ.get("ULTRALYTICS_HUB_WEB", "https://hub.ultralytics.com")
 
 PREFIX = colorstr("Ultralytics HUB: ")
-HELP_MSG = "If this issue persists please visit https://github.com/ultralytics/hub/issues for assistance."
+HELP_MSG = "If this issue persists please visit https://github.com/JustAGek/yolov12-course-projecthub/issues for assistance."
 
 
 def request_with_credentials(url: str) -> any:
@@ -200,7 +200,7 @@ class Events:
             and RANK in {-1, 0}
             and not TESTS_RUNNING
             and ONLINE
-            and (IS_PIP_PACKAGE or get_git_origin_url() == "https://github.com/ultralytics/ultralytics.git")
+            and (IS_PIP_PACKAGE or get_git_origin_url() == "https://github.com/JustAGek/yolov12-course-project")
         )
 
     def __call__(self, cfg):

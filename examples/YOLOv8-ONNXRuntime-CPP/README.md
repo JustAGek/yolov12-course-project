@@ -47,7 +47,7 @@ onnx.save(model_fp16, R"YOUR_FP16_ONNX_PATH")
 
 ## Download COCO.yaml file 📂
 
-In order to run example, you also need to download coco.yaml. You can download the file manually from [here](https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/cfg/datasets/coco.yaml)
+In order to run example, you also need to download coco.yaml. You can download the file manually from [here](https://github.com/JustAGek/yolov12-course-project)
 
 ## Dependencies ⚙️
 

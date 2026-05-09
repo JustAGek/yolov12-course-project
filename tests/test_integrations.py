@@ -30,7 +30,7 @@ def test_mlflow():
     SETTINGS["mlflow"] = False
 
 
-@pytest.mark.skipif(True, reason="Test failing in scheduled CI https://github.com/ultralytics/ultralytics/pull/8868")
+@pytest.mark.skipif(True, reason="Test failing in scheduled CI https://github.com/JustAGek/yolov12-course-projectultralytics/pull/8868")
 @pytest.mark.skipif(not check_requirements("mlflow", install=False), reason="mlflow not installed")
 def test_mlflow_keep_run_active():
     """Ensure MLflow run status matches MLFLOW_KEEP_RUN_ACTIVE environment variable settings."""
@@ -126,7 +126,7 @@ def test_pycocotools():
     from ultralytics.models.yolo.segment import SegmentationValidator
 
     # Download annotations after each dataset downloads first
-    url = "https://github.com/ultralytics/assets/releases/download/v0.0.0/"
+    url = "https://github.com/JustAGek/yolov12-course-projectassets/releases/download/v0.0.0/"
 
     args = {"model": "yolo11n.pt", "data": "coco8.yaml", "save_json": True, "imgsz": 64}
     validator = DetectionValidator(args=args)

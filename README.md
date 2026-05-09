@@ -18,11 +18,11 @@ Real-time object detection is critical for applications like robotics, traffic m
 
 ## Approach
 
-We used the upstream YOLOv12 repository with Ultralytics (v8.3.63) for evaluation. The system performs single-pass object detection using pretrained weights and outputs bounding boxes with class labels and confidence scores.
+We used the YOLOv12 codebase with Ultralytics (v8.3.63) for evaluation. The system performs single-pass object detection using pretrained weights and outputs bounding boxes with class labels and confidence scores.
 
 ### Implementations Used
 
-- YOLOv12 (upstream repository)
+- YOLOv12 pretrained weights
 - Ultralytics evaluation APIs
 - COCO 2017 validation split with YOLO-format labels
 
@@ -109,12 +109,12 @@ YOLOv12n provides the strongest overall detection accuracy in this evaluation wh
 
 ## Repository Structure
 
-- deployment/: REST API + Docker deployment
-- figures/: report figures
-- report.md and report.pdf: full report content and PDF
-- results/: evaluation outputs (metrics, tables)
-- data/: placeholder for small project data
-- notebooks/: Kaggle or local notebooks
+- project/deployment/: REST API + Docker deployment
+- project/figures/: report figures
+- project/report.md and project/report.pdf: full report content and PDF
+- project/results/: evaluation outputs (metrics, tables)
+- project/data/: placeholder for small project data
+- project/notebooks/: Kaggle or local notebooks
 
 ## Attribution
 

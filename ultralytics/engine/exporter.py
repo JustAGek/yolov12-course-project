@@ -282,7 +282,7 @@ class Exporter:
         if edgetpu:
             if not LINUX:
                 raise SystemError("Edge TPU export only supported on Linux. See https://coral.ai/docs/edgetpu/compiler")
-            elif self.args.batch != 1:  # see github.com/ultralytics/ultralytics/pull/13420
+            elif self.args.batch != 1:  # see link removed
                 LOGGER.warning("WARNING ⚠️ Edge TPU export requires batch size 1, setting batch=1.")
                 self.args.batch = 1
         if isinstance(model, WorldModel):
@@ -292,7 +292,7 @@ class Exporter:
                 "(torchscript, onnx, openvino, engine, coreml) formats. "
                 "See https://docs.ultralytics.com/models/yolo-world for details."
             )
-            model.clip_model = None  # openvino int8 export error: https://github.com/ultralytics/ultralytics/pull/18445
+            model.clip_model = None  # openvino int8 export error: https://github.com/JustAGek/yolov12-course-project/pull/18445
         if self.args.int8 and not self.args.data:
             self.args.data = DEFAULT_CFG.data or TASK2DATA[getattr(model, "task", "detect")]  # assign default data
             LOGGER.warning(
@@ -800,7 +800,7 @@ class Exporter:
     def export_engine(self, dla=None, prefix=colorstr("TensorRT:")):
         """YOLO TensorRT export https://developer.nvidia.com/tensorrt."""
         assert self.im.device.type != "cpu", "export running on CPU but must be on GPU, i.e. use 'device=0'"
-        f_onnx, _ = self.export_onnx()  # run before TRT import https://github.com/ultralytics/ultralytics/issues/7016
+        f_onnx, _ = self.export_onnx()  # run before TRT import https://github.com/JustAGek/yolov12-course-project/issues/7016
 
         try:
             import tensorrt as trt  # noqa
@@ -809,7 +809,7 @@ class Exporter:
                 check_requirements("tensorrt>7.0.0,!=10.1.0")
             import tensorrt as trt  # noqa
         check_version(trt.__version__, ">=7.0.0", hard=True)
-        check_version(trt.__version__, "!=10.1.0", msg="https://github.com/ultralytics/ultralytics/pull/14239")
+        check_version(trt.__version__, "!=10.1.0", msg="https://github.com/JustAGek/yolov12-course-project/pull/14239")
 
         # Setup and checks
         LOGGER.info(f"\n{prefix} starting export with TensorRT {trt.__version__}...")
@@ -977,7 +977,7 @@ class Exporter:
             ">=2.0.0",
             name="tensorflow",
             verbose=True,
-            msg="https://github.com/ultralytics/ultralytics/issues/5161",
+            msg="https://github.com/JustAGek/yolov12-course-project/issues/5161",
         )
         import onnx2tf
 
@@ -1012,7 +1012,7 @@ class Exporter:
             input_onnx_file_path=f_onnx,
             output_folder_path=str(f),
             not_use_onnxsim=True,
-            verbosity="error",  # note INT8-FP16 activation bug https://github.com/ultralytics/ultralytics/issues/15873
+            verbosity="error",  # note INT8-FP16 activation bug https://github.com/JustAGek/yolov12-course-project/issues/15873
             output_integer_quantized_tflite=self.args.int8,
             quant_type="per-tensor",  # "per-tensor" (faster) or "per-channel" (slower but more accurate)
             custom_input_op_name_np_data_path=np_data,
@@ -1054,7 +1054,7 @@ class Exporter:
     @try_export
     def export_tflite(self, keras_model, nms, agnostic_nms, prefix=colorstr("TensorFlow Lite:")):
         """YOLO TensorFlow Lite export."""
-        # BUG https://github.com/ultralytics/ultralytics/issues/13436
+        # BUG https://github.com/JustAGek/yolov12-course-project/issues/13436
         import tensorflow as tf  # noqa
 
         LOGGER.info(f"\n{prefix} starting export with tensorflow {tf.__version__}...")
@@ -1070,7 +1070,7 @@ class Exporter:
     @try_export
     def export_edgetpu(self, tflite_model="", prefix=colorstr("Edge TPU:")):
         """YOLO Edge TPU export https://coral.ai/docs/edgetpu/models-intro/."""
-        LOGGER.warning(f"{prefix} WARNING ⚠️ Edge TPU known bug https://github.com/ultralytics/ultralytics/issues/1185")
+        LOGGER.warning(f"{prefix} WARNING ⚠️ Edge TPU known bug https://github.com/JustAGek/yolov12-course-project/issues/1185")
 
         cmd = "edgetpu_compiler --version"
         help_url = "https://coral.ai/docs/edgetpu/compiler/"

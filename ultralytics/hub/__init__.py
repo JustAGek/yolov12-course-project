@@ -130,8 +130,8 @@ def check_dataset(path: str, task: str) -> None:
         task (str): Dataset task. Options are 'detect', 'segment', 'pose', 'classify', 'obb'.
 
     Example:
-        Download *.zip files from https://github.com/ultralytics/hub/tree/main/example_datasets
-            i.e. https://github.com/ultralytics/hub/raw/main/example_datasets/coco8.zip for coco8.zip.
+        Download *.zip files from https://github.com/JustAGek/yolov12-course-projecthub/tree/main/example_datasets
+            i.e. https://github.com/JustAGek/yolov12-course-projecthub/raw/main/example_datasets/coco8.zip for coco8.zip.
         ```python
         from ultralytics.hub import check_dataset
 

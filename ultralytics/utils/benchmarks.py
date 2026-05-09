@@ -219,7 +219,7 @@ class RF100Benchmark:
         (shutil.rmtree("rf-100"), os.mkdir("rf-100")) if os.path.exists("rf-100") else os.mkdir("rf-100")
         os.chdir("rf-100")
         os.mkdir("ultralytics-benchmarks")
-        safe_download("https://github.com/ultralytics/assets/releases/download/v0.0.0/datasets_links.txt")
+        safe_download("https://github.com/JustAGek/yolov12-course-projectassets/releases/download/v0.0.0/datasets_links.txt")
 
         with open(ds_link_txt) as file:
             for line in file:

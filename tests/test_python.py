@@ -121,7 +121,7 @@ def test_predict_img(model_name):
     batch = [
         str(SOURCE),  # filename
         Path(SOURCE),  # Path
-        "https://github.com/ultralytics/assets/releases/download/v0.0.0/zidane.jpg" if ONLINE else SOURCE,  # URI
+        "https://github.com/JustAGek/yolov12-course-projectassets/releases/download/v0.0.0/zidane.jpg" if ONLINE else SOURCE,  # URI
         cv2.imread(str(SOURCE)),  # OpenCV
         Image.open(SOURCE),  # PIL
         np.zeros((320, 640, 3), dtype=np.uint8),  # numpy
@@ -181,7 +181,7 @@ def test_track_stream():
 
     Note imgsz=160 required for tracking for higher confidence and better matches.
     """
-    video_url = "https://github.com/ultralytics/assets/releases/download/v0.0.0/decelera_portrait_min.mov"
+    video_url = "https://github.com/JustAGek/yolov12-course-projectassets/releases/download/v0.0.0/decelera_portrait_min.mov"
     model = YOLO(MODEL)
     model.track(video_url, imgsz=160, tracker="bytetrack.yaml")
     model.track(video_url, imgsz=160, tracker="botsort.yaml", save_frames=True)  # test frame saving also
@@ -226,7 +226,7 @@ def test_all_model_yamls():
             YOLO(m.name)
 
 
-@pytest.mark.skipif(WINDOWS, reason="Windows slow CI export bug https://github.com/ultralytics/ultralytics/pull/16003")
+@pytest.mark.skipif(WINDOWS, reason="Windows slow CI export bug https://github.com/JustAGek/yolov12-course-projectultralytics/pull/16003")
 def test_workflow():
     """Test the complete workflow including training, validation, prediction, and exporting."""
     model = YOLO(MODEL)
@@ -313,7 +313,7 @@ def test_data_utils():
 
     for task in TASKS:
         file = Path(TASK2DATA[task]).with_suffix(".zip")  # i.e. coco8.zip
-        download(f"https://github.com/ultralytics/hub/raw/main/example_datasets/{file}", unzip=False, dir=TMP)
+        download(f"https://github.com/JustAGek/yolov12-course-projecthub/raw/main/example_datasets/{file}", unzip=False, dir=TMP)
         stats = HUBDatasetStats(TMP / file, task=task)
         stats.get_json(save=True)
         stats.process_images()
@@ -328,7 +328,7 @@ def test_data_converter():
     from ultralytics.data.converter import coco80_to_coco91_class, convert_coco
 
     file = "instances_val2017.json"
-    download(f"https://github.com/ultralytics/assets/releases/download/v0.0.0/{file}", dir=TMP)
+    download(f"https://github.com/JustAGek/yolov12-course-projectassets/releases/download/v0.0.0/{file}", dir=TMP)
     convert_coco(labels_dir=TMP, save_dir=TMP / "yolo_labels", use_segments=True, use_keypoints=False, cls91to80=True)
     coco80_to_coco91_class()
 

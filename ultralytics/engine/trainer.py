@@ -808,7 +808,7 @@ class BaseTrainer:
         else:
             raise NotImplementedError(
                 f"Optimizer '{name}' not found in list of available optimizers {optimizers}. "
-                "Request support for addition optimizers at https://github.com/ultralytics/ultralytics."
+                "Request support for addition optimizers at https://github.com/JustAGek/yolov12-course-project."
             )
 
         optimizer.add_param_group({"params": g[0], "weight_decay": decay})  # add g0 with weight_decay

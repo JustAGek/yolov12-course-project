@@ -269,7 +269,7 @@ class AutoBackend(nn.Module):
                     check_requirements("tensorrt>7.0.0,!=10.1.0")
                 import tensorrt as trt  # noqa
             check_version(trt.__version__, ">=7.0.0", hard=True)
-            check_version(trt.__version__, "!=10.1.0", msg="https://github.com/ultralytics/ultralytics/pull/14239")
+            check_version(trt.__version__, "!=10.1.0", msg="https://github.com/JustAGek/yolov12-course-project/pull/14239")
             if device.type == "cpu":
                 device = torch.device("cuda:0")
             Binding = namedtuple("Binding", ("name", "dtype", "shape", "data", "ptr"))
@@ -671,7 +671,7 @@ class AutoBackend(nn.Module):
                         scale, zero_point = output["quantization"]
                         x = (x.astype(np.float32) - zero_point) * scale  # re-scale
                     if x.ndim == 3:  # if task is not classification, excluding masks (ndim=4) as well
-                        # Denormalize xywh by image size. See https://github.com/ultralytics/ultralytics/pull/1695
+                        # Denormalize xywh by image size. See https://github.com/JustAGek/yolov12-course-project/pull/1695
                         # xywh are normalized in TFLite/EdgeTPU to mitigate quantization error of integer models
                         if x.shape[-1] == 6:  # end-to-end model
                             x[:, :, [0, 2]] *= w

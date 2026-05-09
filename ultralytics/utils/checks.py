@@ -327,7 +327,7 @@ def check_font(font="Arial.ttf"):
         return matches[0]
 
     # Download to USER_CONFIG_DIR if missing
-    url = f"https://github.com/ultralytics/assets/releases/download/v0.0.0/{name}"
+    url = f"https://github.com/JustAGek/yolov12-course-projectassets/releases/download/v0.0.0/{name}"
     if downloads.is_url(url, check=True):
         downloads.safe_download(url=url, file=file)
         return file
@@ -481,8 +481,8 @@ def check_yolov5u_filename(file: str, verbose: bool = True):
             if file != original_file and verbose:
                 LOGGER.info(
                     f"PRO TIP 💡 Replace 'model={original_file}' with new 'model={file}'.\nYOLOv5 'u' models are "
-                    f"trained with https://github.com/ultralytics/ultralytics and feature improved performance vs "
-                    f"standard YOLOv5 models trained with https://github.com/ultralytics/yolov5.\n"
+                    f"trained with https://github.com/JustAGek/yolov12-course-project and feature improved performance vs "
+                    f"standard YOLOv5 models trained with https://github.com/JustAGek/yolov12-course-projectyolov5.\n"
                 )
     return file
 

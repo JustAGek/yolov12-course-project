@@ -425,7 +425,7 @@ def check_cls_dataset(dataset, split=""):
         if str(dataset) == "imagenet":
             subprocess.run(f"bash {ROOT / 'data/scripts/get_imagenet.sh'}", shell=True, check=True)
         else:
-            url = f"https://github.com/ultralytics/assets/releases/download/v0.0.0/{dataset}.zip"
+            url = f"https://github.com/JustAGek/yolov12-course-projectassets/releases/download/v0.0.0/{dataset}.zip"
             download(url, dir=data_dir.parent)
         s = f"Dataset download success ✅ ({time.time() - t:.1f}s), saved to {colorstr('bold', data_dir)}\n"
         LOGGER.info(s)
@@ -479,8 +479,8 @@ class HUBDatasetStats:
         autodownload (bool): Attempt to download dataset if not found locally. Default is False.
 
     Example:
-        Download *.zip files from https://github.com/ultralytics/hub/tree/main/example_datasets
-            i.e. https://github.com/ultralytics/hub/raw/main/example_datasets/coco8.zip for coco8.zip.
+        Download *.zip files from https://github.com/JustAGek/yolov12-course-projecthub/tree/main/example_datasets
+            i.e. https://github.com/JustAGek/yolov12-course-projecthub/raw/main/example_datasets/coco8.zip for coco8.zip.
         ```python
         from ultralytics.data.utils import HUBDatasetStats
 
@@ -702,7 +702,7 @@ def load_dataset_cache_file(path):
     """Load an Ultralytics *.cache dictionary from path."""
     import gc
 
-    gc.disable()  # reduce pickle load time https://github.com/ultralytics/ultralytics/pull/1585
+    gc.disable()  # reduce pickle load time https://github.com/JustAGek/yolov12-course-project/pull/1585
     cache = np.load(str(path), allow_pickle=True).item()  # load dict
     gc.enable()
     return cache

@@ -55,7 +55,7 @@ We welcome contributions to improve this demo! Please submit issues and pull req
 
 ## License
 
-This project is licensed under the AGPL-3.0 License - see the [LICENSE](https://github.com/ultralytics/ultralytics/blob/main/LICENSE) file for details.
+This project is licensed under the AGPL-3.0 License - see the [LICENSE](https://github.com/JustAGek/yolov12-course-project/blob/main/LICENSE) file for details.
 
 ## Acknowledgments
 

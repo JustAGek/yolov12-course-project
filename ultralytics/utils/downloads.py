@@ -13,7 +13,7 @@ import torch
 
 from ultralytics.utils import LOGGER, TQDM, checks, clean_url, emojis, is_online, url2file
 
-# Define Ultralytics GitHub assets maintained at https://github.com/ultralytics/assets
+# Define Ultralytics GitHub assets maintained at https://github.com/JustAGek/yolov12-course-projectassets
 GITHUB_ASSETS_REPO = "ultralytics/assets"
 GITHUB_ASSETS_NAMES = (
     [f"yolov8{k}{suffix}.pt" for k in "nsmlx" for suffix in ("", "-cls", "-seg", "-pose", "-obb", "-oiv7")]
@@ -321,7 +321,7 @@ def safe_download(
         f = Path(url)  # filename
     elif not f.is_file():  # URL and file do not exist
         uri = (url if gdrive else clean_url(url)).replace(  # cleaned and aliased url
-            "https://github.com/ultralytics/assets/releases/download/v0.0.0/",
+            "https://github.com/JustAGek/yolov12-course-projectassets/releases/download/v0.0.0/",
             "https://ultralytics.com/assets/",  # assets alias
         )
         desc = f"Downloading {uri} to '{f}'"
@@ -430,7 +430,7 @@ def attempt_download_asset(file, repo="ultralytics/assets", release="v8.3.0", **
     from ultralytics.utils import SETTINGS  # scoped for circular import
 
     if 'v12' in str(file):
-        repo = "sunsmarterjie/yolov12"
+        repo = "JustAGek/yolov12-course-project"
         release = "turbo"
 
     # YOLOv3/5u updates

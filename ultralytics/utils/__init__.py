@@ -37,7 +37,7 @@ ARGV = sys.argv or ["", ""]  # sometimes sys.argv = []
 FILE = Path(__file__).resolve()
 ROOT = FILE.parents[1]  # YOLO
 ASSETS = ROOT / "assets"  # default images
-ASSETS_URL = "https://github.com/ultralytics/assets/releases/download/v0.0.0"  # assets GitHub URL
+ASSETS_URL = "https://github.com/JustAGek/yolov12-course-projectassets/releases/download/v0.0.0"  # assets GitHub URL
 DEFAULT_CFG_PATH = ROOT / "cfg/default.yaml"
 DEFAULT_SOL_CFG_PATH = ROOT / "cfg/solutions/default.yaml"  # Ultralytics solutions yaml path
 NUM_THREADS = min(8, max(1, os.cpu_count() - 1))  # number of YOLO multiprocessing threads
@@ -105,7 +105,7 @@ HELP_MSG = """
 
     Docs: https://docs.ultralytics.com
     Community: https://community.ultralytics.com
-    GitHub: https://github.com/ultralytics/ultralytics
+    GitHub: https://github.com/JustAGek/yolov12-course-project
     """
 
 # Settings and Environment Variables
@@ -272,7 +272,7 @@ class IterableSimpleNamespace(SimpleNamespace):
             '{name}' object has no attribute '{attr}'. This may be caused by a modified or out of date ultralytics
             'default.yaml' file.\nPlease update your code with 'pip install -U ultralytics' and if necessary replace
             {DEFAULT_CFG_PATH} with the latest version from
-            https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/default.yaml
+            https://github.com/JustAGek/yolov12-course-project/blob/main/ultralytics/cfg/default.yaml
             """
         )
 

@@ -45,7 +45,7 @@ class WorldTrainer(yolo.detect.DetectionTrainer):
         try:
             import clip
         except ImportError:
-            checks.check_requirements("git+https://github.com/ultralytics/CLIP.git")
+            checks.check_requirements("git+https://github.com/JustAGek/yolov12-course-projectCLIP.git")
             import clip
         self.clip = clip
 

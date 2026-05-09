@@ -114,7 +114,7 @@ class Detect(nn.Module):
 
         if self.export and self.format in {"tflite", "edgetpu"}:
             # Precompute normalization factor to increase numerical stability
-            # See https://github.com/ultralytics/ultralytics/issues/7371
+            # See https://github.com/JustAGek/yolov12-course-project/issues/7371
             grid_h = shape[2]
             grid_w = shape[3]
             grid_size = torch.tensor([grid_w, grid_h, grid_w, grid_h], device=box.device).reshape(1, 4, 1)
@@ -336,7 +336,7 @@ class WorldDetect(Detect):
 
         if self.export and self.format in {"tflite", "edgetpu"}:
             # Precompute normalization factor to increase numerical stability
-            # See https://github.com/ultralytics/ultralytics/issues/7371
+            # See https://github.com/JustAGek/yolov12-course-project/issues/7371
             grid_h = shape[2]
             grid_w = shape[3]
             grid_size = torch.tensor([grid_w, grid_h, grid_w, grid_h], device=box.device).reshape(1, 4, 1)

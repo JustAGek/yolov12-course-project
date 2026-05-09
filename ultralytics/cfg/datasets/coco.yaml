@@ -105,7 +105,7 @@ download: |
   # Download labels
   segments = True  # segment or box labels
   dir = Path(yaml['path'])  # dataset root dir
-  url = 'https://github.com/ultralytics/assets/releases/download/v0.0.0/'
+  url = 'https://github.com/JustAGek/yolov12-course-projectassets/releases/download/v0.0.0/'
   urls = [url + ('coco2017labels-segments.zip' if segments else 'coco2017labels.zip')]  # labels
   download(urls, dir=dir.parent)
   # Download data

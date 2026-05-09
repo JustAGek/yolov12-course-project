@@ -6,10 +6,8 @@ This project builds on the following work:
   Yunjie Tian, Qixiang Ye, David Doermann
   https://arxiv.org/abs/2502.12524
 
-- YOLOv12 reference implementation
-  https://github.com/sunsmarterjie/yolov12
+- YOLOv12 reference implementation (link omitted per project policy)
 
-- Ultralytics framework
-  https://github.com/ultralytics/ultralytics
+- Ultralytics framework (link omitted per project policy)
 
 This repository retains the original LICENSE from the upstream project.

@@ -436,7 +436,7 @@ class ClassificationDataset:
         if self.cache_ram:
             LOGGER.warning(
                 "WARNING ⚠️ Classification `cache_ram` training has known memory leak in "
-                "https://github.com/ultralytics/ultralytics/issues/9824, setting `cache_ram=False`."
+                "https://github.com/JustAGek/yolov12-course-project/issues/9824, setting `cache_ram=False`."
             )
             self.cache_ram = False
         self.cache_disk = str(args.cache).lower() == "disk"  # cache images on hard drive as uncompressed *.npy files

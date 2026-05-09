@@ -140,7 +140,7 @@ CLI_HELP_MSG = f"""
     Docs: https://docs.ultralytics.com
     Solutions: https://docs.ultralytics.com/solutions/
     Community: https://community.ultralytics.com
-    GitHub: https://github.com/ultralytics/ultralytics
+    GitHub: https://github.com/JustAGek/yolov12-course-project
     """
 
 # Define keys for arg type checks

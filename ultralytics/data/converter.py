@@ -675,7 +675,7 @@ def create_synthetic_coco_dataset():
 
     # Download labels
     dir = DATASETS_DIR / "coco"
-    url = "https://github.com/ultralytics/assets/releases/download/v0.0.0/"
+    url = "https://github.com/JustAGek/yolov12-course-projectassets/releases/download/v0.0.0/"
     label_zip = "coco2017labels-segments.zip"
     download([url + label_zip], dir=dir.parent)
 

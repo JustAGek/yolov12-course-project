@@ -328,7 +328,7 @@ class LoadImagesAndVideos:
             path = Path(path).read_text().splitlines()  # list of sources
         files = []
         for p in sorted(path) if isinstance(path, (list, tuple)) else [path]:
-            a = str(Path(p).absolute())  # do not use .resolve() https://github.com/ultralytics/ultralytics/issues/2912
+            a = str(Path(p).absolute())  # do not use .resolve() https://github.com/JustAGek/yolov12-course-project/issues/2912
             if "*" in a:
                 files.extend(sorted(glob.glob(a, recursive=True)))  # glob
             elif os.path.isdir(a):

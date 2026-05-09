@@ -901,7 +901,7 @@ class Annotator:
         cv2.line(self.im, center_point, center_bbox, color, self.tf)
 
 
-@TryExcept()  # known issue https://github.com/ultralytics/yolov5/issues/5395
+@TryExcept()  # known issue https://github.com/JustAGek/yolov12-course-projectyolov5/issues/5395
 @plt_settings()
 def plot_labels(boxes, cls, names=(), save_dir=Path(""), on_plot=None):
     """Plot training labels including class histograms and box statistics."""
@@ -999,7 +999,7 @@ def save_one_box(xyxy, im, file=Path("im.jpg"), gain=1.02, pad=10, square=False,
     if save:
         file.parent.mkdir(parents=True, exist_ok=True)  # make directory
         f = str(increment_path(file).with_suffix(".jpg"))
-        # cv2.imwrite(f, crop)  # save BGR, https://github.com/ultralytics/yolov5/issues/7007 chroma subsampling issue
+        # cv2.imwrite(f, crop)  # save BGR, https://github.com/JustAGek/yolov12-course-projectyolov5/issues/7007 chroma subsampling issue
         Image.fromarray(crop[..., ::-1]).save(f, quality=95, subsampling=0)  # save RGB
     return crop
 

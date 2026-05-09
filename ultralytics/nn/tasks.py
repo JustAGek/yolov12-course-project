@@ -610,7 +610,7 @@ class WorldModel(DetectionModel):
         try:
             import clip
         except ImportError:
-            check_requirements("git+https://github.com/ultralytics/CLIP.git")
+            check_requirements("git+https://github.com/JustAGek/yolov12-course-projectCLIP.git")
             import clip
 
         if (
@@ -840,8 +840,8 @@ def torch_safe_load(weight, safe_only=False):
             raise TypeError(
                 emojis(
                     f"ERROR ❌️ {weight} appears to be an Ultralytics YOLOv5 model originally trained "
-                    f"with https://github.com/ultralytics/yolov5.\nThis model is NOT forwards compatible with "
-                    f"YOLOv8 at https://github.com/ultralytics/ultralytics."
+                    f"with https://github.com/JustAGek/yolov12-course-projectyolov5.\nThis model is NOT forwards compatible with "
+                    f"YOLOv8 at https://github.com/JustAGek/yolov12-course-project."
                     f"\nRecommend fixes are to train a new model using the latest 'ultralytics' package or to "
                     f"run a command with an official Ultralytics model, i.e. 'yolo predict model=yolov8n.pt'"
                 )

@@ -133,7 +133,7 @@ class FastSAMPredictor(SegmentationPredictor):
         try:
             import clip
         except ImportError:
-            checks.check_requirements("git+https://github.com/ultralytics/CLIP.git")
+            checks.check_requirements("git+https://github.com/JustAGek/yolov12-course-projectCLIP.git")
             import clip
         if (not hasattr(self, "clip_model")) or (not hasattr(self, "clip_preprocess")):
             self.clip_model, self.clip_preprocess = clip.load("ViT-B/32", device=self.device)
