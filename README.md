@@ -1,5 +1,7 @@
 # YOLOv12n vs YOLO11n vs YOLOv8n on COCO 2017 (val)
 
+[![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/code/abdulrahmanhammd/yolov12-course-project)
+
 Project report PDF: [project/report.pdf](project/report.pdf)
 
 ## Abstract
